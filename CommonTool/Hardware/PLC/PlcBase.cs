@@ -48,6 +48,11 @@ namespace CommonTool.Hardware.PLC
         public string HeartBeatAddress { get; set; }
 
         /// <summary>
+        /// 心跳发送时间(ms)
+        /// </summary>
+        public int HeartBeatTime { get; set; } = 1000;
+
+        /// <summary>
         /// 是否开启心跳
         /// </summary>
         public bool IsOpenHeartBeat { get; set; }
@@ -285,7 +290,7 @@ namespace CommonTool.Hardware.PLC
                     LoopCount++;
                     LoopCount = LoopCount % 20;
                 }
-                Thread.Sleep( 1000 );
+                Thread.Sleep( HeartBeatTime );
             }
         }
     }

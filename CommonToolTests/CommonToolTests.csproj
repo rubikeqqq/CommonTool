@@ -55,6 +55,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Core\ConversionTests.cs" />
     <Compile Include="Core\ExtensionsTests.cs" />
     <Compile Include="Core\LogHelperTests.cs" />
     <Compile Include="Hardware\PLC\MXPlcTests.cs" />
